@@ -23,7 +23,7 @@ function nowServing(deliCounter) {
 
 //THIRD FUNCTION currentLine
 function currentLine(deliCounter) {
-	var str = "The line is Currently: "
+	var str = "The line is currently: "
 	if(deliCounter.length !== 0) {
 		for(var i = 0; i < deliCounter.length - 1; i++) {
 			str = str + (i + 1) + ". " + deliCounter[i] + ", ";
