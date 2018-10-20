@@ -25,6 +25,9 @@ function currentLine(deliCounter) {
 	if(deliCounter.length !== 0) {
 		for(var i = 0; i < deliCounter.length; i++) {
 			str = str + (i + 1) + ". " + deliCounter[i] + ", ";
+			if(deliCounter.length == i - 1 ) {
+				str = str + (i + 1) + ". " + deliCounter[i];
+			}
 		}
 		return str;
 	}
@@ -32,5 +35,5 @@ function currentLine(deliCounter) {
 		return "The line is currently empty."
 	}
 }
-deliCounter.length = 0;
+
 console.log(currentLine(deliCounter));
