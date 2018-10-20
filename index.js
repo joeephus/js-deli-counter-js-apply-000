@@ -8,6 +8,8 @@ function takeANumber(deliCounter, name) {
 
 console.log(takeANumber(deliCounter, "Ada"));
 console.log(takeANumber(deliCounter, "Joe"));
+console.log(takeANumber(deliCounter, "Frank"));
+console.log(takeANumber(deliCounter, "Grace"));
 
 //SECOND FUNCTION nowServing
 function nowServing(deliCounter) {
@@ -23,13 +25,11 @@ function nowServing(deliCounter) {
 function currentLine(deliCounter) {
 	var str = "The line is Currently: "
 	if(deliCounter.length !== 0) {
-		for(var i = 0; i < deliCounter.length; i++) {
+		for(var i = 0; i < deliCounter.length - 1; i++) {
 			str = str + (i + 1) + ". " + deliCounter[i] + ", ";
-			if(deliCounter.length == i - 1 ) {
-				str = str + (i + 1) + ". " + deliCounter[i];
-			}
 		}
-		return str;
+		var last = deliCounter.slice(-1)[0];
+		return str + deliCounter.length + ". " + last;
 	}
 	else if (deliCounter.length === 0){
 		return "The line is currently empty."
